@@ -1,0 +1,30 @@
+Lab#4:Interaction Terms, MSCS3045, Fall2022.
+
+The objective of this lab is learn about how to make multiple linear regression.
+You can find more information about the data used in this lab here: https://www.kaggle.com/datasets/elikplim/forest-fires-data-set
+
+
+
+The forestfires.csv data base contains information on 517 forest fires that occurred in Montesinho Natural Park in Portugal. The columns report the temperature, relative humidity, wind speed, and amount of rainfall at the time of the fire, as well as the area burned.
+
+1. Read in the file forestfires.csv.
+2. Perform multiple linear regression using the ols() function with area as the response variable and wind and the interaction term RH*temp, in that order, as the predictor variables.
+3. Create and print the ANOVA table.
+                sum_sq     df         F    PR(>F)
+wind      3.205248e+03    1.0  0.795656  0.372814
+RH        1.417655e+03    1.0  0.351912  0.553295
+temp      1.149237e+04    1.0  2.852813  0.091823
+RH:temp   4.240945e+03    1.0  1.052752  0.305359
+Residual  2.062559e+06  512.0       NaN       NaN
+
+4. If rain is used instead of wind, the output is:
+
+
+                sum_sq     df         F    PR(>F)
+rain      1.239028e+01    1.0  0.003071  0.955829
+RH        1.435916e+03    1.0  0.355894  0.551059
+temp      9.949932e+03    1.0  2.466107  0.116943
+RH:temp   3.238244e+03    1.0  0.802604  0.370737
+Residual  2.065752e+06  512.0       NaN       NaN
+'
+

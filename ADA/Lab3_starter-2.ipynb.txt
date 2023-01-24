@@ -1,0 +1,15 @@
+Lab#3:Linear Regression, MSCS3045, Fall2022.
+
+The objective of this lab is learn about how to make predictions using simple linear regression (SLR) models
+You can find more information about the data used in this lab here: https://www.kaggle.com/datasets/harlfoxem/housesalesprediction?resource=download
+
+The kc_house_data dataset contains information on house sale prices in King County, Washington from May 2014 and May 2015. The columns include sale price, number of bedrooms, and square footage of living space.
+Write a program using the ols() function that creating a model that takes in the square footage of 
+
+1. living space in a house and gives the price of the house as output.
+For example, if the input is: 1000, then the output should be:
+0    237042.824803
+dtype: float64
+
+2. Then use the zip code to predict the price
+3. Then use the number of bathrooms.

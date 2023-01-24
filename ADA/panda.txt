@@ -1,0 +1,4 @@
+import pandas as pd
+import glob
+Datarow1 = pd.read_csv('/content/drive/MyDrive/Colab Notebooks/names/names/yob1880.txt')
+print(Datarow1)

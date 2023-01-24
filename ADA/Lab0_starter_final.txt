@@ -1,0 +1,276 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Lab0_starter.ipynb",
+      "provenance": []
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# DS 105/305  Spring 2022  \n",
+        "# Lab 0\n",
+        "\n",
+        "# Due: Tuesday, Jan. 25 by 11:59PM"
+      ],
+      "metadata": {
+        "id": "qU60HlV6lMGf"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Rename your notebook (in the upper left) from Untitled.ipynb to Lab0_NNN_Last_First where NNN is either 105 or 305 and Last and First are you last and first names, respectively."
+      ],
+      "metadata": {
+        "id": "RPeaPkQolrcb"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Begin by using the Files panel on the left to import the yob1880.txt file into your workspace.  Then make sure the following two cells run correctly - you should see that the list has 2000 items in it.  "
+      ],
+      "metadata": {
+        "id": "-8W51jjsfzEn"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import csv\n",
+        "names = list()\n",
+        "with open('yob1880.txt', newline='') as f:\n",
+        "    reader = csv.reader(f)\n",
+        "    for row in reader:\n",
+        "        names.append(row)"
+      ],
+      "metadata": {
+        "id": "IMqPE1IaegU7"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "len(names)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "EAqu7rVjfY1_",
+        "outputId": "1e696d48-1dc4-484c-ff5a-8f627f0a5cfb"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "2000"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 7
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# What does one item look like?\n",
+        "names[0]"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "06ihlwKUfpsI",
+        "outputId": "b4045dd9-9eaf-4b13-b65a-07372054afc3"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "['Mary', 'F', '7065']"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 8
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Each row in the file contains three strings, a name, either 'F' or 'M', and a frequency count, represented as a string.  Notice that a certain bias is already indicated in this dataset!"
+      ],
+      "metadata": {
+        "id": "A0uIxsmlgcQ7"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "for (name, sex, count) in names:\n",
+        "  if (name[0] == \"Q\"):\n",
+        "    print(name, count)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "jf4nz3MsgVZq",
+        "outputId": "9180e0cc-5803-4053-d319-3772c5de0f7c"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Queen 17\n",
+            "Queenie 11\n",
+            "Quincy 8\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Now build a single Python dictionary all_names with all the names as keys and the counts as values.  Use int() to convert the counts from strings to actual integers."
+      ],
+      "metadata": {
+        "id": "mEZ-pkYxh0o-"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# put some code here to do this"
+      ],
+      "metadata": {
+        "id": "L-KYE6GIiGnw"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Find the total of all the counts in the dictionary."
+      ],
+      "metadata": {
+        "id": "w1VsgbgnidXn"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# put some code here to do this"
+      ],
+      "metadata": {
+        "id": "pvTPikFpiwT7"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Now find a list of names with the highest and lowest counts.  If multiple names have the highest or lowest count, the list will have more than one name.  "
+      ],
+      "metadata": {
+        "id": "XENrB5mSjIMh"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# put some code here to do this"
+      ],
+      "metadata": {
+        "id": "vrx8CsLRjXzJ"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Explain what's happening in this cell:"
+      ],
+      "metadata": {
+        "id": "6jvjPgt2jozM"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "counts = [int(c) for (n,s,c) in names]\n",
+        "print(len(counts))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "trg41W_0jxBT",
+        "outputId": "14894957-bc43-4654-ab27-3968a4083b33"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "2000\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "For each letter in the alphabet, find the most common name beginning with that letter.  How you do this is up to you, but one approach would be to munge the data into a dictionary where the keys are starting letters and the values are lists from the original list."
+      ],
+      "metadata": {
+        "id": "sc0TcAKrt2vU"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# put some code here to do this"
+      ],
+      "metadata": {
+        "id": "wH1j0okguN06"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Use the file menu under the name of the ipynb file to download the ipynb file to your local machine, store it someplace safe, and email a copy to kmehta@clarku.edu to submit this lab."
+      ],
+      "metadata": {
+        "id": "qFHNrHRjmGZv"
+      }
+    }
+  ]
+}
